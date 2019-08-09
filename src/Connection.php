@@ -32,6 +32,6 @@ class Connection extends Mysqli implements PoolObjectInterface
 
     function beforeUse(): bool
     {
-        return $this->connected;
+        return $this->getMysqlClient()->connected;
     }
 }
